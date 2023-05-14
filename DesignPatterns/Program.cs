@@ -2,5 +2,5 @@
 
 using DesignPatterns.SOLID.Principles;
 
-SingleResponsibility.Main(args);
+SingleResponsibility.Start(args);
 
