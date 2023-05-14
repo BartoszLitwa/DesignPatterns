@@ -8,4 +8,6 @@ using DesignPatterns.SOLID.Principles;
 
 //LiskovSubstitution.Start(args);
 
-InterfaceSegregation.Start(args);
+//InterfaceSegregation.Start(args);
+
+DependencyInversion.Start(args);
