@@ -6,4 +6,6 @@ using DesignPatterns.SOLID.Principles;
 
 //OpenClosed.Start(args);
 
-LiskovSubstitution.Start(args);
+//LiskovSubstitution.Start(args);
+
+InterfaceSegregation.Start(args);
