@@ -2,5 +2,8 @@
 
 using DesignPatterns.SOLID.Principles;
 
-SingleResponsibility.Start(args);
+//SingleResponsibility.Start(args);
 
+//OpenClosed.Start(args);
+
+LiskovSubstitution.Start(args);
