@@ -5,3 +5,5 @@ using DesignPatterns.Builder.Examples;
 HtmlBuilderExample.Start(args);
 
 FluentBuilderInheritance.Start(args);
+
+StepwiseBuilder.Start(args);
