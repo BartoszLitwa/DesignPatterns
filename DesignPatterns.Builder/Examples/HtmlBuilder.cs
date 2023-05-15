@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DesignPatterns.Builder
+namespace DesignPatterns.Builder.Examples
 {
     public class HtmlElement
     {
@@ -14,7 +14,7 @@ namespace DesignPatterns.Builder
 
         public HtmlElement()
         {
-            
+
         }
 
         public HtmlElement(string name, string text)
@@ -34,7 +34,7 @@ namespace DesignPatterns.Builder
                 sb.AppendLine(Text);
             }
 
-            foreach(var element in Elements)
+            foreach (var element in Elements)
             {
                 sb.Append(element.ToStringImpl(indent + 1));
             }
@@ -58,10 +58,11 @@ namespace DesignPatterns.Builder
             root.Name = rootName;
         }
 
-        public void AddChild(string childName, string childText)
+        public HtmlBuilder AddChild(string childName, string childText)
         {
             var e = new HtmlElement(childName, childText);
             root.Elements.Add(e);
+            return this;
         }
 
         public override string ToString()
@@ -80,8 +81,8 @@ namespace DesignPatterns.Builder
         public static void Start(string[] args)
         {
             var builder = new HtmlBuilder("ul");
-            builder.AddChild("li", "Child 1");
-            builder.AddChild("li", "Child 2");
+            builder.AddChild("li", "Child 1")
+                    .AddChild("li", "Child 2");
 
             Console.WriteLine(builder);
         }
