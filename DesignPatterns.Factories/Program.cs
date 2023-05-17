@@ -7,3 +7,5 @@ FactoryMethod.Start(args);
 await AsyncFactoryMethod.Start(args);
 
 ObjectTrackingAndBulkReplacement.Start(args);
+
+AbstractFactory.Start(args);
