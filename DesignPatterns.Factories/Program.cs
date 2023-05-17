@@ -3,3 +3,5 @@
 using DesignPatterns.Factories.Examples;
 
 FactoryMethod.Start(args);
+
+await AsyncFactoryMethod.Start(args);
