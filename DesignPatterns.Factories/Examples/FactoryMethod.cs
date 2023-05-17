@@ -10,7 +10,7 @@ namespace DesignPatterns.Factories.Examples
     {
         private double x, y;
 
-        private Point(double x, double y)
+        private Point(double x, double y) // Should be private
         {
             this.x = x;
             this.y = y;
@@ -21,7 +21,27 @@ namespace DesignPatterns.Factories.Examples
         public static Point NewPolarPoint(double rho, double theta)
             => new Point(rho * Math.Cos(theta), rho * Math.Sin(theta));
 
-        public override string ToString() => $"{nameof(x)}: {x}, {nameof(y)}: {y}";
+        public override string ToString() => $"Point - {nameof(x)}: {x}, {nameof(y)}: {y}";
+    }
+
+    public class PointF
+    {
+        private double x, y;
+
+        public PointF(double x, double y) // Has to be public
+        {
+            this.x = x;
+            this.y = y;
+        }
+        public override string ToString() => $"PointF - {nameof(x)}: {x}, {nameof(y)}: {y}";
+    }
+
+    public static class PointFactory
+    {
+        public static PointF NewCartesianPoint(double x, double y) => new PointF(x, y);
+
+        public static PointF NewPolarPoint(double rho, double theta)
+            => new PointF(rho * Math.Cos(theta), rho * Math.Sin(theta));
     }
 
     public class FactoryMethod
@@ -33,6 +53,12 @@ namespace DesignPatterns.Factories.Examples
 
             var point2 = Point.NewCartesianPoint(1, 6);
             Console.WriteLine(point2);
+
+            var pointF = PointFactory.NewPolarPoint(1.0, Math.PI / 2);
+            Console.WriteLine(pointF);
+
+            var pointF2 = PointFactory.NewCartesianPoint(1, 6);
+            Console.WriteLine(pointF2);
         }
     }
 }
