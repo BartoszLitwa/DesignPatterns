@@ -4,7 +4,12 @@ using System.Text.Json;
 
 namespace DesignPatterns.Prototype.Examples
 {
-    public class Person : ICloneable
+    public interface IPrototype<T>
+    {
+        T DeepCopy();
+    }
+
+    public class Person : ICloneable, IPrototype<Person>
     {
         public Address Address;
         public string[] Names;
@@ -22,18 +27,14 @@ namespace DesignPatterns.Prototype.Examples
             Address = address;
         }
 
-        public object Clone()
-        {
-            return new Person(Names, (Address)Address.Clone());
-        }
+        public object Clone() => new Person(Names, (Address)Address.Clone());
 
-        public override string ToString()
-        {
-            return $"{nameof(Names)}: {string.Join(',', Names)}, {nameof(Address)}: {Address}";
-        }
+        public Person DeepCopy() => new Person(Names, Address.DeepCopy());
+
+        public override string ToString() => $"{nameof(Names)}: {string.Join(',', Names)}, {nameof(Address)}: {Address}";
     }
 
-    public class Address : ICloneable
+    public class Address : ICloneable, IPrototype<Address>
     {
         public int HouseNumber;
         public string StreetName;
@@ -51,15 +52,11 @@ namespace DesignPatterns.Prototype.Examples
             HouseNumber = houseNumber;
         }
 
-        public object Clone()
-        {
-            return new Address(StreetName, HouseNumber);
-        }
+        public object Clone() => new Address(StreetName, HouseNumber);
 
-        public override string ToString()
-        {
-            return $"{nameof(StreetName)}: {StreetName}, {nameof(HouseNumber)}: {HouseNumber}";
-        }
+        public Address DeepCopy() => new Address(StreetName, HouseNumber);
+
+        public override string ToString() => $"{nameof(StreetName)}: {StreetName}, {nameof(HouseNumber)}: {HouseNumber}";
     }
 
     public class ICloneableIsBad
@@ -71,6 +68,7 @@ namespace DesignPatterns.Prototype.Examples
             var jane = john; // Copy reference
             var jan = john.Clone(); // Create a copy
             var copy = new Person(john); // Copy constructor - C++ thing
+            var deepCopy = john.DeepCopy(); // IPrototype interface
 
             Console.WriteLine(john);
         }
