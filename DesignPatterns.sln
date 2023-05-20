@@ -13,6 +13,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DesignPatterns.Prototype", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesignPatterns.Singleton", "DesignPatterns.Singleton\DesignPatterns.Singleton.csproj", "{3EA47EBA-32A0-49D6-BF09-A8BD15909603}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesignPatterns.Adapter", "DesignPatterns.Adapter\DesignPatterns.Adapter.csproj", "{56A13F2B-8D0B-45C9-A4A6-9DFDD792906D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{3EA47EBA-32A0-49D6-BF09-A8BD15909603}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3EA47EBA-32A0-49D6-BF09-A8BD15909603}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3EA47EBA-32A0-49D6-BF09-A8BD15909603}.Release|Any CPU.Build.0 = Release|Any CPU
+		{56A13F2B-8D0B-45C9-A4A6-9DFDD792906D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56A13F2B-8D0B-45C9-A4A6-9DFDD792906D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56A13F2B-8D0B-45C9-A4A6-9DFDD792906D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56A13F2B-8D0B-45C9-A4A6-9DFDD792906D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
