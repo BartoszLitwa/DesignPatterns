@@ -1,14 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DesignPatterns.Singleton.CodingExercise
 {
     public class SingletonTester
     {
-        private static Lazy<SingletonTester> _instance 
+        private static Lazy<SingletonTester> _instance
             = new Lazy<SingletonTester>(() => new SingletonTester());
 
         public static SingletonTester Instance => _instance.Value;
