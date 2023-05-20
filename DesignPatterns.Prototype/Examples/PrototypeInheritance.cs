@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DesignPatterns.Prototype.Examples.PrototypeInheritance
 {
@@ -62,7 +59,7 @@ namespace DesignPatterns.Prototype.Examples.PrototypeInheritance
         public override string ToString() => $"{nameof(Names)}: {string.Join(',', Names)}, {nameof(Address)}: {Address}";
     }
 
-    public class Employee : Person, IDeepCopyable<Employee> 
+    public class Employee : Person, IDeepCopyable<Employee>
     {
         public int Salary;
 

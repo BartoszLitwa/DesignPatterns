@@ -1,10 +1,7 @@
 ﻿using Autofac;
 using NUnit.Framework;
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DesignPatterns.Singleton.Examples
 {
@@ -38,7 +35,7 @@ namespace DesignPatterns.Singleton.Examples
         }
 
         private static Lazy<SingletonDatabase> _instance // Initialized only once whend first time needed
-            = new Lazy<SingletonDatabase>(() => new SingletonDatabase()); 
+            = new Lazy<SingletonDatabase>(() => new SingletonDatabase());
 
         public static SingletonDatabase Instance => _instance.Value;
 
@@ -48,7 +45,7 @@ namespace DesignPatterns.Singleton.Examples
     public class OrdinaryDatabase : IDatabase
     {
         private Dictionary<string, int> _capitals = new();
-        
+
         public OrdinaryDatabase()
         {
             Console.WriteLine("Initializing Database");

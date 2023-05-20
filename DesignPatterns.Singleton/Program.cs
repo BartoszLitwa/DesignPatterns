@@ -3,3 +3,7 @@
 using DesignPatterns.Singleton.Examples;
 
 SingletonImplementation.Starts(args);
+
+Monostate.Start(args);
+
+PerThreadSingleton.Start(args);
