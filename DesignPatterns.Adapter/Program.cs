@@ -3,3 +3,5 @@
 using DesignPatterns.Adapter.Examples;
 
 VectorRasterDemo.Start(args);
+
+GenericValueAdapter.Start(args);
