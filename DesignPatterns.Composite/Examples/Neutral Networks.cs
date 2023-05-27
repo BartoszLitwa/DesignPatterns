@@ -1,10 +1,7 @@
 ﻿using System;
 using System.Collections;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DesignPatterns.Composite.Examples
 {
@@ -12,11 +9,11 @@ namespace DesignPatterns.Composite.Examples
     {
         public static void Connect(this IEnumerable<Neuron> self, IEnumerable<Neuron> other)
         {
-            if(ReferenceEquals(self, other)) return;
+            if (ReferenceEquals(self, other)) return;
 
-            foreach(Neuron from in self)
+            foreach (Neuron from in self)
             {
-                foreach(Neuron to in other)
+                foreach (Neuron to in other)
                 {
                     from.Out.Add(to);
                     to.In.Add(from);

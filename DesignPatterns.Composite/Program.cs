@@ -3,3 +3,5 @@
 using DesignPatterns.Composite.Examples;
 
 GeometricShapes.Start(args);
+
+CompositeSpecification.Start(args);

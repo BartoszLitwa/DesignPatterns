@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DesignPatterns.SOLID.Principles
 {
@@ -115,7 +112,7 @@ namespace DesignPatterns.SOLID.Principles
             Product[] products = { apple, tree, house };
             var pf = new ProductFilter();
             Console.WriteLine("Green products (old): ");
-            foreach(var p in pf.FilterByColor(products, Color.Green))
+            foreach (var p in pf.FilterByColor(products, Color.Green))
             {
                 Console.WriteLine($" - {p.Name} is green");
             }
@@ -128,7 +125,7 @@ namespace DesignPatterns.SOLID.Principles
             }
 
             Console.WriteLine("Large blue items: ");
-            foreach (var p in bf.Filter(products, 
+            foreach (var p in bf.Filter(products,
                 new AndSpecification<Product>(
                     new ColorSpecification(Color.Blue),
                     new SizeSpecification(Size.Large))
