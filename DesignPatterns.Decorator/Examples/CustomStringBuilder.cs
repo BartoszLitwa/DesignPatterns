@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace DesignPatterns.Decorator.Examples
 {
@@ -13,22 +11,22 @@ namespace DesignPatterns.Decorator.Examples
         public CodeBuilder Append(bool value)
         {
             builder.Append(value);
-			return this;
+            return this;
         }
         public CodeBuilder AppendFormat(IFormatProvider provider, string format, object arg0)
         {
             builder.AppendFormat(provider, format, arg0);
-			return this;
+            return this;
         }
         public CodeBuilder AppendJoin(char separator, object[] values)
         {
             builder.AppendJoin(separator, values);
-			return this;
+            return this;
         }
         public CodeBuilder AppendLine()
         {
             builder.AppendLine();
-			return this;
+            return this;
         }
         public CodeBuilder AppendLine(string? value)
         {
@@ -38,7 +36,7 @@ namespace DesignPatterns.Decorator.Examples
         public CodeBuilder Clear()
         {
             builder.Clear();
-			return this;
+            return this;
         }
         public void CopyTo(int sourceIndex, char[] destination, int destinationIndex, int count)
         {
@@ -55,17 +53,17 @@ namespace DesignPatterns.Decorator.Examples
         public CodeBuilder Insert(int index, bool value)
         {
             builder.Insert(index, value);
-			return this;
+            return this;
         }
         public CodeBuilder Remove(int startIndex, int length)
         {
             builder.Remove(startIndex, length);
-			return this;
+            return this;
         }
         public CodeBuilder Replace(char oldChar, char newChar)
         {
             builder.Replace(oldChar, newChar);
-			return this;
+            return this;
         }
         public string ToString(int startIndex, int length)
         {
