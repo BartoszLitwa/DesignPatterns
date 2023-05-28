@@ -12,7 +12,7 @@ namespace DesignPatterns.Decorator.Examples.MultipleInheritanceWithDefaultInterf
     {
         void Fly()
         {
-            if(Age >= 10)
+            if (Age >= 10)
                 Console.WriteLine("I am Flying");
         }
     }
@@ -42,7 +42,7 @@ namespace DesignPatterns.Decorator.Examples.MultipleInheritanceWithDefaultInterf
             //((ILizard)d).Crawl();
             if (d is IBird bird)
                 bird.Fly();
-            if(d is ILizard lizard)
+            if (d is ILizard lizard)
                 lizard.Crawl();
         }
     }

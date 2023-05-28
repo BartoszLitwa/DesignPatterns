@@ -10,3 +10,5 @@ AdapterDecorator.Start(args);
 MultipleInheritanceWithInterfaces.Start(args);
 
 MultipleInheritanceWithDefaultInterfaceMembers.Start(args);
+
+DecoratorComposition.Start(args);
