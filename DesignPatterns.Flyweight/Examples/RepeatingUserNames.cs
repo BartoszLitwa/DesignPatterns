@@ -65,8 +65,8 @@ namespace DesignPatterns.Flyweight.Examples
 
             var users = new List<User>();
 
-            foreach(var fName in firstNames)
-                foreach(var lName in lastNames)
+            foreach (var fName in firstNames)
+                foreach (var lName in lastNames)
                     users.Add(new User($"{fName} {lName}"));
 
             ForceGC();
