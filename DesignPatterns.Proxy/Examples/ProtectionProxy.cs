@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DesignPatterns.Proxy.Examples.ProtectionProxy
 {
@@ -47,7 +44,7 @@ namespace DesignPatterns.Proxy.Examples.ProtectionProxy
     {
         public static void Start(string[] args)
         {
-            ICar car = new CarProxy(new Driver { Age = 12});
+            ICar car = new CarProxy(new Driver { Age = 12 });
             car.Drive();
         }
     }
