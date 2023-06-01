@@ -12,3 +12,5 @@ PropertyProxy.Start(args);
 ValueProxy.Start(args);
 
 CompositeProxy_SoA_Aos.Start(args);
+
+CompositeProxyWithArray_BackedProperties.Start(args);
