@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DesignPatterns.Proxy.Examples
 {
@@ -42,7 +39,7 @@ namespace DesignPatterns.Proxy.Examples
             }
             set
             {
-                if(!value.HasValue) return;
+                if (!value.HasValue) return;
                 for (int i = 0; i < flags.Length; i++)
                 {
                     flags[i] = value.Value;
@@ -65,7 +62,7 @@ namespace DesignPatterns.Proxy.Examples
             set => flags[2] = value;
             get => flags[2];
         }
-    } 
+    }
 
     public class CompositeProxyWithArray_BackedProperties
     {
