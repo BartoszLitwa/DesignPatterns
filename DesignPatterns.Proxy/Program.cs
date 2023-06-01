@@ -5,6 +5,7 @@ using DesignPatterns.Proxy.Examples.DynamicProxyForLogging;
 using DesignPatterns.Proxy.Examples.PropertyProxy;
 using DesignPatterns.Proxy.Examples.ProtectionProxy;
 using DesignPatterns.Proxy.Examples.ValueProxy;
+using DesignPatterns.Proxy.Examples.ViewModel;
 
 ProtectionProxy.Start(args);
 
@@ -17,3 +18,5 @@ CompositeProxy_SoA_Aos.Start(args);
 CompositeProxyWithArray_BackedProperties.Start(args);
 
 DynamicProxyForLogging.Start(args);
+
+ViewModel.Start(args);
