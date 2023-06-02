@@ -20,3 +20,5 @@ CompositeProxyWithArray_BackedProperties.Start(args);
 DynamicProxyForLogging.Start(args);
 
 ViewModel.Start(args);
+
+BitFragging.Start(args);
