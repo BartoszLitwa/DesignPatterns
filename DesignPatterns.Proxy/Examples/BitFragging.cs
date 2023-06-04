@@ -1,10 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using System.Reflection;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace DesignPatterns.Proxy.Examples
 {
@@ -102,10 +100,10 @@ namespace DesignPatterns.Proxy.Examples
                 new[] { Operations.Multipilication, Operations.Division},
                 new[] { Operations.Add, Operations.Subtractaction}
             };
-            startAgain:
-            foreach(var group in opGroups)
+        startAgain:
+            foreach (var group in opGroups)
             {
-                for(int i = 0; i < operations.Count; i++)
+                for (int i = 0; i < operations.Count; i++)
                 {
                     if (group.Contains(operations[i]))
                     {
@@ -149,9 +147,9 @@ namespace DesignPatterns.Proxy.Examples
             var numbers = new[] { 1, 3, 5, 7 };
             var numberOfOps = numbers.Length - 1;
 
-            for(int result = 0; result <= 10; ++result)
+            for (int result = 0; result <= 10; ++result)
             {
-                for(var key = 0UL; key < (1UL << 2 * numberOfOps); ++key)
+                for (var key = 0UL; key < (1UL << 2 * numberOfOps); ++key)
                 {
                     var tbs = new TwoBitSet(key);
                     var ops = Enumerable.Range(0, numberOfOps)
@@ -159,7 +157,7 @@ namespace DesignPatterns.Proxy.Examples
                         .Cast<Operations>().ToArray();
 
                     var problem = new Problem(numbers, ops);
-                    if(problem.Eval() == result)
+                    if (problem.Eval() == result)
                     {
                         Console.WriteLine($"{new Problem(numbers, ops)} = {result}");
                         break;
