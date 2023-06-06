@@ -101,12 +101,12 @@ namespace DesignPatterns.Command.Examples
 
             Console.WriteLine(ba);
 
-            foreach(var c in commands)
+            foreach (var c in commands)
             {
                 c.Call();
             }
 
-            foreach(var c in Enumerable.Reverse(commands))
+            foreach (var c in Enumerable.Reverse(commands))
             {
                 c.Undo();
             }
