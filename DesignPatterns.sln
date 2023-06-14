@@ -33,7 +33,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DesignPatterns.Command", "D
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DesignPatterns.Interpreter", "DesignPatterns.Interpreter\DesignPatterns.Interpreter.csproj", "{33A7A89C-57C2-4E6F-A7D1-29864CEBBFFA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesignPatterns.Iterator", "DesignPatterns.Iterator\DesignPatterns.Iterator.csproj", "{CDFE060D-B544-4EB7-91C1-DCB2556E3EDA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DesignPatterns.Iterator", "DesignPatterns.Iterator\DesignPatterns.Iterator.csproj", "{CDFE060D-B544-4EB7-91C1-DCB2556E3EDA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesignPatterns.Mediator", "DesignPatterns.Mediator\DesignPatterns.Mediator.csproj", "{289A401F-8EE4-4786-B9FE-BC78D6DF7B04}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -105,6 +107,10 @@ Global
 		{CDFE060D-B544-4EB7-91C1-DCB2556E3EDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CDFE060D-B544-4EB7-91C1-DCB2556E3EDA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CDFE060D-B544-4EB7-91C1-DCB2556E3EDA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{289A401F-8EE4-4786-B9FE-BC78D6DF7B04}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{289A401F-8EE4-4786-B9FE-BC78D6DF7B04}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{289A401F-8EE4-4786-B9FE-BC78D6DF7B04}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{289A401F-8EE4-4786-B9FE-BC78D6DF7B04}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
