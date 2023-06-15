@@ -3,3 +3,5 @@
 using DesignPatterns.Mediator.Examples;
 
 ChatRoom.Start(args);
+
+EventBrokerExample.Start(args);
