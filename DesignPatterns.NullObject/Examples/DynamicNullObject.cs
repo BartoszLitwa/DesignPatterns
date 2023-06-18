@@ -1,6 +1,8 @@
 ﻿using Autofac;
+using ImpromptuInterface;
+using System.Dynamic;
 
-namespace DesignPatterns.NullObject.Examples.NullObjectExample
+namespace DesignPatterns.NullObject.Examples.DynamicNullObject
 {
     public interface ILog
     {
@@ -36,16 +38,26 @@ namespace DesignPatterns.NullObject.Examples.NullObjectExample
         public void Warn(string msg) { }
     }
 
-    public class NullObjectExample
+    public class Null<TInterface> : DynamicObject
+        where TInterface : class
+    {
+        public static TInterface Instance => new Null<TInterface>().ActLike<TInterface>();
+
+        public override bool TryInvokeMember(InvokeMemberBinder binder, object[] args, out object result)
+        {
+            result = Activator.CreateInstance(binder.ReturnType)!;
+            return true;
+        }
+
+    }
+
+    public class DynamicNullObject
     {
         public static void Start(string[] args)
         {
-            var cb = new ContainerBuilder();
-            cb.RegisterType<BankAccount>();
-            cb.RegisterType<NullLog>().As<ILog>();
-
-            using var c = cb.Build();
-            var ba = c.Resolve<BankAccount>();
+            var log = Null<ILog>.Instance;
+            log.Info("testLog");
+            var ba = new BankAccount(log);
             ba.Deposit(100);
         }
     }
