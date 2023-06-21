@@ -1,4 +1,5 @@
 ﻿using DesignPatterns.Observer.Examples;
+using DesignPatterns.Observer.Examples.BidirectionalObserver;
 using DesignPatterns.Observer.Examples.ObservableCollections;
 using DesignPatterns.Observer.Examples.ObserverViaSpecialInterfaces;
 using DesignPatterns.Observer.Examples.ObserverViaTheEventKeyword;
@@ -10,3 +11,5 @@ WeakEventPattern.Start(args);
 ObserverViaSpecialInterfaces.Start(args);
 
 ObservableCollections.Start(args);
+
+BidirectionalObserver.Start(args);
