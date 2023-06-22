@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ParallelProgramming.TaskProgramming.Examples.CancellingTasks
+﻿namespace ParallelProgramming.TaskProgramming.Examples.CancellingTasks
 {
     public class CancellingTasks
     {
@@ -14,32 +8,40 @@ namespace ParallelProgramming.TaskProgramming.Examples.CancellingTasks
             var token = cts.Token;
 
             token.Register(() =>
-            {
-                Console.WriteLine("Cancellation has been request.");
-            });
+                {
+                    Console.WriteLine("Cancellation has been request.");
+                });
 
             var t = new Task(() =>
-            {
-                int i = 0;
-                while (true)
                 {
-                    //if (token.IsCancellationRequested)
-                    //{
-                    //    throw new OperationCanceledException();
-                    //}
-                    // If and throw
-                    token.ThrowIfCancellationRequested();
+                    try
+                    {
+                        int i = 0;
+                        while (true)
+                        {
+                            //if (token.IsCancellationRequested)
+                            //{
+                            //    throw new OperationCanceledException();
+                            //}
+                            // If and throw
+                            token.ThrowIfCancellationRequested();
 
-                    Console.WriteLine($"{i++}\t");
-                }
-            }, token);
+                            Console.WriteLine($"{i++}\t");
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        
+                    }
+                },
+                token);
             t.Start();
 
             Task.Factory.StartNew(() =>
-            {
-                token.WaitHandle.WaitOne();
-                Console.WriteLine("Wait handle released, cancelation was request");
-            });
+                    {
+                        token.WaitHandle.WaitOne();
+                        Console.WriteLine("Wait handle released, cancelation was request");
+                    });
 
             cts.Cancel();
 
@@ -48,18 +50,26 @@ namespace ParallelProgramming.TaskProgramming.Examples.CancellingTasks
             var emergency = new CancellationTokenSource();
 
             var paranoid = CancellationTokenSource.CreateLinkedTokenSource(
-                planned.Token, preventative.Token, emergency.Token);
+                planned.Token,
+                preventative.Token,
+                emergency.Token);
 
             Task.Factory.StartNew(() =>
-            {
-                int i = 0;
-                while (true)
-                {
-                    paranoid.Token.ThrowIfCancellationRequested();
-                    Console.WriteLine($"{i++}\t");
-                    Thread.Sleep(10);
-                }
-            }, paranoid.Token);
+                    {
+                        try
+                        {
+                            int i = 0;
+                            while(true)
+                            {
+                                paranoid.Token.ThrowIfCancellationRequested();
+                                Console.WriteLine($"{i++}\t");
+                                Thread.Sleep(10);
+                            }
+                        } catch(Exception ex)
+                        {
+                        }
+                    },
+                    paranoid.Token);
 
             Thread.Sleep(50);
             emergency.Cancel();
