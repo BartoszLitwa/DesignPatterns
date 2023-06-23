@@ -42,7 +42,7 @@ namespace DesignPatterns.Strategy.CodingExercise.StrategyCodingExercise
             var rootDisc = Complex.Sqrt(disc);
             var plusX = (-b + rootDisc) / (2 * a);
             var minusX = (-b - rootDisc) / (2 * a);
-            return new Tuple<Complex, Complex>(minusX, plusX);
+            return new Tuple<Complex, Complex>(plusX, minusX);
         }
     }
 
