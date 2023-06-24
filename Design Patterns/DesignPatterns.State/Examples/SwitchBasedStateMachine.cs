@@ -12,7 +12,8 @@ namespace DesignPatterns.State.Examples.SwitchBasedStateMachine
         public static void Start(string[] args)
         {
             var code = "1234";
-            var state = State.Locked;
+            //var state = State.Locked;
+            var state = State.Unlocked;
             var entry = new StringBuilder();
 
             while (true)
