@@ -1,6 +1,9 @@
 ﻿using ParallelProgramming.DataSharingAndSynchronization.Examples.CriticalSections;
 using ParallelProgramming.DataSharingAndSynchronization.Examples.InterlockedOperations;
+using ParallelProgramming.DataSharingAndSynchronization.Examples.SpinLockingAndLockRecursion;
 
 CriticalSections.Start(args);
 
 InterlockedOperations.Start(args);
+
+SpinLockingAndLockRecursion.Start(args);
