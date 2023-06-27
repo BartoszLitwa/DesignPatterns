@@ -4,6 +4,7 @@ using DesignPatterns.Observer.Examples.ObservableCollections;
 using DesignPatterns.Observer.Examples.ObserverViaSpecialInterfaces;
 using DesignPatterns.Observer.Examples.ObserverViaTheEventKeyword;
 using DesignPatterns.Observer.Examples.PropertyDependencies;
+using DesignPatterns.Observer.ExamplesDeclarativeEventSubscriptionsWithInterfaces;
 
 Console.WriteLine($"{nameof(ObserverViaTheEventKeyword)}\n");
 ObserverViaTheEventKeyword.Start(args);
@@ -22,3 +23,6 @@ BidirectionalObserver.Start(args);
 
 Console.WriteLine($"{nameof(PropertyDependencies)}\n");
 PropertyDependencies.Start(args);
+
+Console.WriteLine($"{nameof(DeclarativeEventSubscriptionsWithInterfaces)}\n");
+DeclarativeEventSubscriptionsWithInterfaces.Start(args);
