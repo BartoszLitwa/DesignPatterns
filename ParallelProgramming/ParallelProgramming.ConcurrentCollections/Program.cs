@@ -1,3 +1,11 @@
-﻿using ParallelProgramming.ConcurrentCollections.Examples.ConcurrentDicitionaryExample;
+﻿using ParallelProgramming.ConcurrentCollections.Examples;
+using ParallelProgramming.ConcurrentCollections.Examples.ConcurrentDicitionaryExample;
 
+Console.WriteLine($"{nameof(ConcurrentDicitionaryExample)}\n");
 ConcurrentDicitionaryExample.Start(args);
+
+Console.WriteLine($"{nameof(ConcurrentQueueExample)}\n");
+ConcurrentQueueExample.Start(args);
+
+Console.WriteLine($"{nameof(ConcurrentStackExample)}\n");
+ConcurrentStackExample.Start(args);
