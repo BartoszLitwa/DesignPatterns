@@ -9,3 +9,6 @@ ConcurrentQueueExample.Start(args);
 
 Console.WriteLine($"{nameof(ConcurrentStackExample)}\n");
 ConcurrentStackExample.Start(args);
+
+Console.WriteLine($"{nameof(ConcurrentBagExample)}\n");
+ConcurrentBagExample.Start(args);
