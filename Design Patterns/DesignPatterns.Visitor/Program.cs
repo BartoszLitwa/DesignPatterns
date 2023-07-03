@@ -1,4 +1,5 @@
 ﻿using DesignPatterns.Visitor.Examples.ClassicVisitorDoubleDispatch;
+using DesignPatterns.Visitor.Examples.DynamicVisitorViaTheDLR;
 using DesignPatterns.Visitor.Examples.IntrusiveVisitor;
 using DesignPatterns.Visitor.Examples.ReductionsAndTransforms;
 using DesignPatterns.Visitor.Examples.ReflectiveVisitor;
@@ -14,3 +15,6 @@ ClassicVisitorDoubleDispatch.Start(args);
 
 Console.WriteLine($"\n{nameof(ReductionsAndTransforms)}\n");
 ReductionsAndTransforms.Start(args);
+
+Console.WriteLine($"\n{nameof(DynamicVisitorViaTheDLR)}\n");
+DynamicVisitorViaTheDLR.Start(args);
