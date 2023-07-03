@@ -3,6 +3,7 @@ using ParallelProgramming.TaskCoordination.Examples.ChildTasks;
 using ParallelProgramming.TaskCoordination.Examples.Continuations;
 using ParallelProgramming.TaskCoordination.Examples.CountdownEventExample;
 using ParallelProgramming.TaskCoordination.Examples.ManualResetEventSlimAndAutoResetEvent;
+using ParallelProgramming.TaskCoordination.Examples.SemaphoreSlimExample;
 
 Console.WriteLine($"\n{nameof(Continuations)}\n");
 Continuations.Start(args);
@@ -18,3 +19,6 @@ CountdownEventExample.Start(args);
 
 Console.WriteLine($"\n{nameof(ManualResetEventSlimAndAutoResetEvent)}\n");
 ManualResetEventSlimAndAutoResetEvent.Start(args);
+
+Console.WriteLine($"\n{nameof(SemaphoreSlimExample)}\n");
+SemaphoreSlimExample.Start(args);
