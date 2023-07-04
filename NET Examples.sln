@@ -63,6 +63,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ParallelProgramming.Concurr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParallelProgramming.TaskCoordination", "ParallelProgramming\ParallelProgramming.TaskCoordination\ParallelProgramming.TaskCoordination.csproj", "{74289EE8-6979-479D-B36C-C9D74091AB0B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParallelProgramming.ParallelLoops", "ParallelProgramming\ParallelProgramming.ParallelLoops\ParallelProgramming.ParallelLoops.csproj", "{2A8E86C4-58E0-4106-B7EB-26CE183EF43F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -181,6 +183,10 @@ Global
 		{74289EE8-6979-479D-B36C-C9D74091AB0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{74289EE8-6979-479D-B36C-C9D74091AB0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{74289EE8-6979-479D-B36C-C9D74091AB0B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A8E86C4-58E0-4106-B7EB-26CE183EF43F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A8E86C4-58E0-4106-B7EB-26CE183EF43F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A8E86C4-58E0-4106-B7EB-26CE183EF43F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A8E86C4-58E0-4106-B7EB-26CE183EF43F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -214,6 +220,7 @@ Global
 		{222A75B7-186E-4385-885F-A24C570AE39B} = {5A5D0A80-CD76-4ED7-9A39-745F7AE8ED44}
 		{7B69017A-F8D9-4A20-99E7-F9DA57F8179A} = {19F7734B-549A-400E-8059-70057CCC53A3}
 		{74289EE8-6979-479D-B36C-C9D74091AB0B} = {19F7734B-549A-400E-8059-70057CCC53A3}
+		{2A8E86C4-58E0-4106-B7EB-26CE183EF43F} = {19F7734B-549A-400E-8059-70057CCC53A3}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {30A9F528-38CB-4965-B755-D7BAD4126F89}
