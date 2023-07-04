@@ -1,4 +1,5 @@
-﻿using DesignPatterns.Visitor.Examples.AcyclicVisitor;
+﻿using DesignPatterns.Visitor.CodingExercise;
+using DesignPatterns.Visitor.Examples.AcyclicVisitor;
 using DesignPatterns.Visitor.Examples.ClassicVisitorDoubleDispatch;
 using DesignPatterns.Visitor.Examples.DynamicVisitorViaTheDLR;
 using DesignPatterns.Visitor.Examples.IntrusiveVisitor;
@@ -22,3 +23,6 @@ DynamicVisitorViaTheDLR.Start(args);
 
 Console.WriteLine($"\n{nameof(AcyclicVisitor)}\n");
 AcyclicVisitor.Start(args);
+
+Console.WriteLine($"\n{nameof(VisitorCodingExercise)}\n");
+VisitorCodingExercise.Start(args);
