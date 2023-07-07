@@ -65,6 +65,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParallelProgramming.TaskCoo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParallelProgramming.ParallelLoops", "ParallelProgramming\ParallelProgramming.ParallelLoops\ParallelProgramming.ParallelLoops.csproj", "{2A8E86C4-58E0-4106-B7EB-26CE183EF43F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParallelProgramming.ParallelLINQ", "ParallelProgramming\ParallelProgramming.ParallelLINQ\ParallelProgramming.ParallelLINQ.csproj", "{EDDA2B20-9A83-4E4B-97B8-A4D08E6C07EA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -187,6 +189,10 @@ Global
 		{2A8E86C4-58E0-4106-B7EB-26CE183EF43F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2A8E86C4-58E0-4106-B7EB-26CE183EF43F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2A8E86C4-58E0-4106-B7EB-26CE183EF43F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EDDA2B20-9A83-4E4B-97B8-A4D08E6C07EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EDDA2B20-9A83-4E4B-97B8-A4D08E6C07EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EDDA2B20-9A83-4E4B-97B8-A4D08E6C07EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EDDA2B20-9A83-4E4B-97B8-A4D08E6C07EA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -221,6 +227,7 @@ Global
 		{7B69017A-F8D9-4A20-99E7-F9DA57F8179A} = {19F7734B-549A-400E-8059-70057CCC53A3}
 		{74289EE8-6979-479D-B36C-C9D74091AB0B} = {19F7734B-549A-400E-8059-70057CCC53A3}
 		{2A8E86C4-58E0-4106-B7EB-26CE183EF43F} = {19F7734B-549A-400E-8059-70057CCC53A3}
+		{EDDA2B20-9A83-4E4B-97B8-A4D08E6C07EA} = {19F7734B-549A-400E-8059-70057CCC53A3}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {30A9F528-38CB-4965-B755-D7BAD4126F89}
