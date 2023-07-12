@@ -7,8 +7,5 @@
         <Nullable>enable</Nullable>
     </PropertyGroup>
 
-    <ItemGroup>
-      <Folder Include="Examples\" />
-    </ItemGroup>
 
 </Project>
